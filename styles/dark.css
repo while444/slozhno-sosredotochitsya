@@ -1,3 +1,11 @@
+/* :root.theme-dark {
+  --accent-color: #FF0070;
+  --text-size: 18px;
+  --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  --header-heading-color: #DB00FF;
+  --section-text-color: #F1B2CE;
+} */
+
 /*
   Специально для тёмной темы при наличии класса,
   здесь окажутся стили, которые нужно переопределить принудительно,
@@ -9,4 +17,73 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
+}
+
+.header__bottom-decor {
+  border-bottom: 1px solid #FF0070;
+  border-left: 1px solid #FF0070; 
+  margin-top: 89px;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+}
+
+.header__theme-menu-button_type_dark {
+  border: 1px solid var(--accent-color);
+}
+
+/* .rec {
+  text-transform: uppercase;
+  color: var(--accent-color);
+  font-size: var(--text-size);
+  text-align: center;
+  font-family: "IBM Plex Mono";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px;
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+} */
+
+
+.header__heading {
+  color: var(--header-heading-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.title-decor {
+  color: #000028;
+  background-color: var(--accent-color);
+}
+
+/* Блок concentartion (Первый блок) */
+.concentration__content-heading {
+  color: var(--accent-color);
+}
+
+.concentration__content-text {
+  color: var(--section-text-color);
+}
+
+/* Footer */
+.footer__heading {
+  color: var(--header-heading-color);
+  text-shadow: 2px 2px 0px #FF0070;
+}
+
+/* Декорации для футера */
+.top__decor {
+  border-top: 1px solid #FF0070;
+  border-right: 1px solid #FF0070;
+}
+
+.bottom__decor {
+  border-bottom: 1px solid #FF0070;
+  border-left: 1px solid #FF0070; 
+}
+
+/* Стилизация ссылок в тексте */
+.text-link {
+  text-shadow: 1px 1px 0px var(--accent-color);
 }
