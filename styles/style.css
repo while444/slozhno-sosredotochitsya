@@ -25,9 +25,9 @@
   height: 25px;
 }
 
-.test {
+/* .test {
   display: flex;
-}
+} */
 
 .rec {
   display: flex;
@@ -72,7 +72,7 @@ section {
 
 
 /* Стилизация разных состояний для кнопок */
-.header__theme-menu-button:focus {
+/* .header__theme-menu-button:focus {
   outline: none;
 }
 
@@ -82,18 +82,12 @@ section {
 
 .header__theme-menu-button:focus-visible {
   border-bottom: 1px  solid var(--accent-color);
-}
-
-/* Класс для нажатой кнопки */
-.header__theme-menu-button_active {
-  pointer-events: none;
-}
+} */
 
 .header__theme-menu {
   display: flex;
   justify-content: center;
   gap: 10px;
-  
 }
 
 .header__heading {

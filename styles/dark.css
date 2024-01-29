@@ -1,10 +1,10 @@
-/* :root.theme-dark {
+:root.theme-dark {
   --accent-color: #FF0070;
   --text-size: 18px;
   --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   --header-heading-color: #DB00FF;
   --section-text-color: #F1B2CE;
-} */
+}
 
 /*
   Специально для тёмной темы при наличии класса,
@@ -19,6 +19,26 @@
   */
 }
 
+/* Навигация */
+.header__theme-menu-button_active {
+  pointer-events: none;
+  outline: 1px  solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus {
+  outline: none;
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px  solid var(--accent-color);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px  solid var(--accent-color);
+}
+
+
+
 .header__bottom-decor {
   border-bottom: 1px solid #FF0070;
   border-left: 1px solid #FF0070; 
@@ -28,23 +48,6 @@
 .header__theme-menu-button {
   color: var(--accent-color);
 }
-
-.header__theme-menu-button_type_dark {
-  border: 1px solid var(--accent-color);
-}
-
-/* .rec {
-  text-transform: uppercase;
-  color: var(--accent-color);
-  font-size: var(--text-size);
-  text-align: center;
-  font-family: "IBM Plex Mono";
-  font-style: normal;
-  font-weight: 400;
-  line-height: 25px;
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
-} */
 
 
 .header__heading {
@@ -87,3 +90,13 @@
 .text-link {
   text-shadow: 1px 1px 0px var(--accent-color);
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accent-color: #FF0070;
+    --text-size: 18px;
+    --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    --header-heading-color: #DB00FF;
+    --section-text-color: #F1B2CE;   
+    }
+  }
