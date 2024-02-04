@@ -40,3 +40,8 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
+
+img {
+  margin: 0;
+  padding: 0;
+}

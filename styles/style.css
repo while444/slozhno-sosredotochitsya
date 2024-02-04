@@ -1,10 +1,10 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  background-image: url(../images/cover-image-dark.png);
+  /* background-image: url(../images/cover-image-dark.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   padding: 0 20px;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
 }
@@ -13,6 +13,12 @@
   width: 25px;
   height: 25px;
   margin-left: auto;
+}
+
+.bottom__decor {
+  border-bottom: 1px solid var(--menu-accent-color);
+  border-left: 1px solid var(--menu-accent-color); 
+  margin-top: 89px;
 }
 
 .bottom__decor {
@@ -63,11 +69,13 @@ section {
 }
 
 .header__theme-menu-button {
+  font-family: "IBM Plex Mono";
   font-size: var(--text-size);
   background-color: transparent;
   border: 0;
   text-transform: lowercase;
   padding: 0 13px;
+  color: var(--accent-color);
 }
 
 
@@ -88,6 +96,7 @@ section {
   display: flex;
   justify-content: center;
   gap: 10px;
+  margin-top: -12px;
 }
 
 .header__heading {
@@ -97,6 +106,7 @@ section {
   font-weight: 700;
   line-height: 82.5%;
   margin-top: 274px;
+  margin-left: -20px;
 }
 
 .header__text {
@@ -135,12 +145,26 @@ section {
 }
 
 .concentration__content-heading {
-  max-width: 314px;
+  min-width: 314px;
   font-family: 'IBM Plex Mono';
   font-size: var(--text-size);
   font-style: normal;
   font-weight: 700;
   line-height: 23px;
+  margin-top: 5px;
+  padding-bottom: 21px;
+}
+
+.concentartion__wrapper-second {
+  margin-top: 5px;
+}
+
+.concentartion__wrapper-third {
+  margin-top: 17px;
+}
+
+.concentration__content-heading-third {
+  margin-top: -9px;
 }
 
 .concentration__content {
@@ -231,7 +255,7 @@ footer {
   max-width: 1024px;
   margin: 0 auto;
   margin-top: 60px;
-  height: 768px;
+  height: 1024px;
   padding: 20px 0px;
   display: flex;
   flex-direction: column;
@@ -247,6 +271,7 @@ footer {
   font-weight: 700;
   line-height: 82px;
   text-align: center;
+  margin-top: -156px;
 }
 
 /* MEDIA */
@@ -254,18 +279,42 @@ footer {
   .header__theme-menu {
     flex-direction: column;
     margin-left: auto;
+    margin-top: 74px;
   }
 
   .header__text {
     width: 364px;
   }
 
+  .header__heading {
+    margin-top: 180px;
+    margin-left: -21px;
+    margin-right: auto;
+  }
+
+  .header__text-container {
+    margin-top: 50px;
+    padding-bottom: 50px;
+  }
+
   .concentration__content-heading {
-    width: 236px;
+    min-width: 236px;
+    margin-top: 8px;
+    padding-bottom: 21px;
+  }
+
+  .concentration__content-heading-second {
+    max-width: 140px;
+    padding-bottom: 9px;
+  }
+
+  .concentartion__wrapper-third {
+    margin-top: 0;
   }
 
   .concentration__content-text {
     width: 472px;
+    margin-top: 1px;
   }
 
   .concentration__wrapper-horizontal {
@@ -275,6 +324,10 @@ footer {
 
   .concentration__content-text-horizont {
     width: 100%;
+  }
+
+  .concentration__content-accent {
+    margin-top: 2px;
   }
 
   .photo__gallery {
@@ -300,10 +353,19 @@ footer {
     width: 479px;
     height: 318px;
   }
+
+  .footer__heading {
+    font-size: 120px;
+    margin-top: 85px;
+  }
 }
 
 
 @media (375px <= width < 768px) {
+  .top__decor {
+    margin-top: -6px;
+  }
+
   .page  {
     padding: 0 10px;
   }
@@ -312,13 +374,24 @@ footer {
     padding-top: 50px;
   }
 
+  .header__heading {
+    margin-top: 76px;
+    margin-left: -2px;
+  }
+
   .header__theme-menu {
     flex-direction: column;
     margin-left: auto;
+    margin-top: 16px;
   }
 
   .header__text {
     width: 364px;
+    margin-top: 53px;
+  }
+
+  .bottom__decor-header {
+    margin-top: 31px;
   }
 
   .concentration__wrapper {
@@ -327,14 +400,22 @@ footer {
 
   .concentration__content-heading {
     width: 355px;
+    padding-bottom: 0;
+  }
+
+  .concentration__content-heading-second {
+    padding-bottom: 15px;
   }
 
   .concentration__content-text {
     width: 351px;
+    line-height: normal;
   }
 
   .concentration__content-accent {
     width: 355px;
+    line-height: normal;
+    margin-top: 1px;
   }
 
   .concentration__wrapper-horizontal {
@@ -348,12 +429,35 @@ footer {
 
   .photo__gallery {
     width: 355px;
-    grid-template-columns: 1;
-    column-gap: 0px;
-    row-gap: 10px;
+    display: block;
   }
 
   .sunset {
+    width: 355px;
+    height: 142px;
+  }
+  .ice-cream {
+    width: 355px;
+    height: 355px;
+    margin-top: 10px;
+  }
+
+  .tape {
+    width: 355px;
+    height: 237px;
+    margin-top: 10px;
+  }
+  .books {
+    width: 355px;
+    height: 355px;
+    margin-top: 10px;
+  }
+  .street {
+    width: 355px;
+    height: 237px;
+    margin-top: 10px;
+  }
+  /* .sunset {
     width: 355px;
     grid-column: 1/2;
   }
@@ -376,9 +480,21 @@ footer {
     width: 355px;
     height: 237px;
     grid-column: 1/2;
+  } */
+  .top__decor-footer {
+    margin-top: -60px;
+  }
+
+  .bottom__decor-footer {
+    margin-bottom: 398px;
+  }
+
+  .footer {
+    height: 668px;
   }
 
   .footer__heading {
     font-size: 116px;
+    margin-top: 90px;
   }
 }

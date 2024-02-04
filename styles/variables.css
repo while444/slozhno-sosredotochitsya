@@ -4,9 +4,15 @@
 */
 
 :root {
-  --accent-color: #FF0070;
+  /* --accent-color: #FF0070; */
   --text-size: 18px;
   --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --header-heading-color: #DB00FF;
-  --section-text-color: #F1B2CE;
+  /* --header-heading-color: #DB00FF;
+  --section-text-color: #F1B2CE; */
+  --accent-color: #ff0070;
+  --header-heading-color: #db00ff;
+  --accent-text-color: #000028;
+  --section-text-color: #f1b2ce;
+  --menu-accent-color: #ff0070;
+  --heading-shadow-color: #ff0070;
 }

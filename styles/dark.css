@@ -1,9 +1,15 @@
 :root.theme-dark {
-  --accent-color: #FF0070;
+  /* --accent-color: #FF0070; */
   --text-size: 18px;
   --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  --header-heading-color: #DB00FF;
-  --section-text-color: #F1B2CE;
+  /* --header-heading-color: #DB00FF;
+  --section-text-color: #F1B2CE; */
+  --accent-color: #ff0070;
+  --header-heading-color: #db00ff;
+  --accent-text-color: #000028;
+  --section-text-color: #f1b2ce;
+  --menu-accent-color: #ff0070;
+  --heading-shadow-color: #ff0070;
 }
 
 /*
@@ -13,6 +19,10 @@
 */
 
 .page.theme_dark {
+  background-image: url(../images/cover-image-dark.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
   /* сохраните этот селектор в приведённом виде.
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
@@ -20,9 +30,15 @@
 }
 
 /* Навигация */
+.header__theme-menu-button {
+  font-size: var(--text-size);
+  background-color: transparent;
+  color: var(--menu-accent-color);
+}
+
 .header__theme-menu-button_active {
   pointer-events: none;
-  outline: 1px  solid var(--accent-color);
+  outline: 1px  solid var(--menu-accent-color);
 }
 
 .header__theme-menu-button:focus {
@@ -30,39 +46,38 @@
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px  solid var(--accent-color);
+  outline: 1px  solid var(--menu-accent-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px  solid var(--accent-color);
+  border-bottom: 1px  solid var(--menu-accent-color);
 }
 
-
-
-.header__bottom-decor {
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070; 
-  margin-top: 89px;
+.top__decor {
+  border-top: 1px solid var(--menu-accent-color);
+  border-right: 1px solid var(--menu-accent-color);
 }
 
-.header__theme-menu-button {
-  color: var(--accent-color);
+.bottom__decor {
+  border-bottom: 1px solid var(--menu-accent-color);
+  border-left: 1px solid var(--menu-accent-color); 
+
 }
 
 
 .header__heading {
   color: var(--header-heading-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--heading-shadow-color);
 }
 
 .title-decor {
-  color: #000028;
+  color: var(--accent-text-color);
   background-color: var(--accent-color);
 }
 
 /* Блок concentartion (Первый блок) */
 .concentration__content-heading {
-  color: var(--accent-color);
+  color: var(--menu-accent-color);
 }
 
 .concentration__content-text {
@@ -72,18 +87,18 @@
 /* Footer */
 .footer__heading {
   color: var(--header-heading-color);
-  text-shadow: 2px 2px 0px #FF0070;
+  text-shadow: 2px 2px 0px var(--heading-shadow-color);
 }
 
 /* Декорации для футера */
 .top__decor {
-  border-top: 1px solid #FF0070;
-  border-right: 1px solid #FF0070;
+  border-top: 1px solid var(--menu-accent-color);
+  border-right: 1px solid var(--menu-accent-color);
 }
 
 .bottom__decor {
-  border-bottom: 1px solid #FF0070;
-  border-left: 1px solid #FF0070; 
+  border-bottom: 1px solid var(--menu-accent-color);
+  border-left: 1px solid var(--menu-accent-color); 
 }
 
 /* Стилизация ссылок в тексте */
@@ -93,10 +108,16 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --accent-color: #FF0070;
+    /* --accent-color: #FF0070; */
     --text-size: 18px;
     --header-heading-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    --header-heading-color: #DB00FF;
-    --section-text-color: #F1B2CE;   
+    /* --header-heading-color: #DB00FF;
+    --section-text-color: #F1B2CE;    */
+    --accent-color: #ff0070;
+    --header-heading-color: #db00ff;
+    --accent-text-color: #000028;
+    --section-text-color: #f1b2ce;
+    --menu-accent-color: #ff0070;
+    --heading-shadow-color: #ff0070;
     }
   }
