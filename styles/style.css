@@ -1,12 +1,27 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .page {
-  /* background-image: url(../images/cover-image-dark.png);
+  background-image: url(../images/cover-image-dark.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed; */
+  background-attachment: fixed;
   padding: 0 20px;
+  position: relative;
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+}
+
+.header {
+  height: 100vh; 
+  min-height: 668px;
+  padding: 20px 0 0 0; 
+}
+
+section {
+  padding-top: 80px;
+}
+
+main {
+  margin-top: 80px;
 }
 
 .top__decor {
@@ -31,21 +46,20 @@
   height: 25px;
 }
 
-/* .test {
-  display: flex;
-} */
-
 .rec {
   display: flex;
   gap: 10px;
   align-items: center;
   justify-content: flex-end;
+  position: absolute;
+  top: 20px;
+  left: 943px;
 }
 
 .rec-text {
   color: #FF0070;
   text-align: center;
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", "sans-serif";
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -60,16 +74,8 @@
   filter: drop-shadow(0px 0px 4px #FF0070);
 }
 
-.header {
-  padding: 20px 0 0 0; 
-}
-
-section {
-  padding-top: 80px;
-}
-
 .header__theme-menu-button {
-  font-family: "IBM Plex Mono";
+  font-family: "IBM Plex Mono", "sans-serif";
   font-size: var(--text-size);
   background-color: transparent;
   border: 0;
@@ -101,7 +107,7 @@ section {
 
 .header__heading {
   font-size: var(--header-heading-size);
-  font-family: 'IBM Plex mono';
+  font-family: 'IBM Plex mono', 'sans-serif';
   font-style: normal;
   font-weight: 700;
   line-height: 82.5%;
@@ -114,8 +120,8 @@ section {
   font-size: var(--text-size);
   font-style: normal;
   font-weight: 700;
-  line-height: 23px;
-  font-family: "IBM Plex Mono";
+  line-height: normal;
+  font-family: "IBM Plex Mono", "sans-serif";
   margin-top: 114px;
 } 
 
@@ -125,7 +131,13 @@ section {
 }
 
 /* Стилизация ссылок в тексте */
+.text-link {
+  text-decoration: none;
+  text-shadow: 1px 1px 0px var(--accent-color);
+}
+
 .text-link:hover {
+  cursor: pointer;
   border-bottom: 1px solid var(--section-text-color);
 }
 
@@ -146,13 +158,15 @@ section {
 
 .concentration__content-heading {
   min-width: 314px;
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'sans-serif';
   font-size: var(--text-size);
   font-style: normal;
   font-weight: 700;
-  line-height: 23px;
-  margin-top: 5px;
-  padding-bottom: 21px;
+}
+
+.concentration__content-heading-second {
+  width: 270px;
+  padding-bottom: 16px;
 }
 
 .concentartion__wrapper-second {
@@ -160,32 +174,27 @@ section {
 }
 
 .concentartion__wrapper-third {
-  margin-top: 17px;
+  margin-top: 3px;
 }
 
 .concentration__content-heading-third {
-  margin-top: -9px;
-}
-
-.concentration__content {
-  /* max-width: 648px; */
+  
 }
 
 .concentration__content-accent {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'sans-serif';
   font-size: var(--text-size);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   line-height: 23px;
 }
 
 .concentration__content-text {
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'sans-serif';
   font-size: var(--text-size);
   font-style: normal;
   font-weight: 400;
-  line-height: 23px;
-  padding-top: 10px;
+  padding-top: 12px;
 }
 
 /* Верхний отступ для контента в секциях */
@@ -253,29 +262,60 @@ section {
 /* Footer */
 footer {
   max-width: 1024px;
+  height: 100vh;
+  min-height: 78px;
+  padding-top: 60px;
   margin: 0 auto;
-  margin-top: 60px;
-  height: 1024px;
-  padding: 20px 0px;
+  /* margin-top: 60px; */
+  /* padding: 20px 0px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-between; */
 }
 
 .footer__heading {
   text-transform: lowercase;
   font-size: var(--header-heading-size);
-  font-family: 'IBM Plex Mono';
+  font-family: 'IBM Plex Mono', 'sans-serif';
   font-size: 157px;
   font-style: normal;
   font-weight: 700;
-  line-height: 82px;
+  /* line-height: 82px; */
   text-align: center;
-  margin-top: -156px;
+  margin-top: 237px;
+  /* margin-top: 321px;
+  padding-bottom: 231px; */
+}
+
+.bottom__decor-footer {
+  margin-top: 237px;
+}
+
+.top__decor-footer {
+  margin-top: 16px;
+  padding-bottom: 20px;
 }
 
 /* MEDIA */
 @media (768px <= width < 1024px) {
+  main {
+    margin-top: 0;
+  }
+
+  .rec {
+    top: 20px;
+    left: 687px;
+  }
+
+  section {
+    padding-top: 60px;
+  }
+
+  .header {
+    height: 100vh; 
+    min-height: 1024px;
+  }
+
   .header__theme-menu {
     flex-direction: column;
     margin-left: auto;
@@ -299,22 +339,22 @@ footer {
 
   .concentration__content-heading {
     min-width: 236px;
-    margin-top: 8px;
     padding-bottom: 21px;
   }
 
   .concentration__content-heading-second {
     max-width: 140px;
-    padding-bottom: 9px;
+    padding-bottom: 15px;
+    margin-top: 16px
   }
 
   .concentartion__wrapper-third {
-    margin-top: 0;
+    margin-top: 13px;
   }
 
   .concentration__content-text {
     width: 472px;
-    margin-top: 1px;
+    line-height: normal;
   }
 
   .concentration__wrapper-horizontal {
@@ -328,6 +368,10 @@ footer {
 
   .concentration__content-accent {
     margin-top: 2px;
+  }
+
+  .gallery {
+    margin-top: 10px;
   }
 
   .photo__gallery {
@@ -354,24 +398,48 @@ footer {
     height: 318px;
   }
 
+  footer {
+    height: 100vh; 
+    min-height: 1024px;
+  }
+
   .footer__heading {
     font-size: 120px;
-    margin-top: 85px;
+    margin-top: 392px;
+  }
+
+  .bottom__decor-footer {
+    margin-top: 389px;
   }
 }
 
 
 @media (375px <= width < 768px) {
   .top__decor {
-    margin-top: -6px;
+    margin-top: -10px;
+  }
+
+  .rec {
+    top: 10px;
+    left: 304px;
   }
 
   .page  {
     padding: 0 10px;
   }
 
+  header {
+    height: 100vh; 
+    min-height: 668px;
+  }
+
+  main {
+    padding-top: 0;
+    margin-top: 0;
+  }
+
   section {
-    padding-top: 50px;
+    padding-top: 28px;
   }
 
   .header__heading {
@@ -382,12 +450,12 @@ footer {
   .header__theme-menu {
     flex-direction: column;
     margin-left: auto;
-    margin-top: 16px;
+    margin-top: 18px;
   }
 
   .header__text {
     width: 364px;
-    margin-top: 53px;
+    margin-top: 48px;
   }
 
   .bottom__decor-header {
@@ -400,11 +468,22 @@ footer {
 
   .concentration__content-heading {
     width: 355px;
-    padding-bottom: 0;
+    padding-bottom: 0px;
+  }
+
+  .concentration__content-heading-first {
+    width: 355px;
+    padding-bottom: 0px;
+    margin-top: 12px;
   }
 
   .concentration__content-heading-second {
-    padding-bottom: 15px;
+    padding-bottom: 13px;
+    margin-top: 24px;
+  }
+
+  .concentration__content-heading-third {
+    margin-top: 19px;
   }
 
   .concentration__content-text {
@@ -427,9 +506,14 @@ footer {
     width: 100%;
   }
 
+  .gallery-heading {
+    margin-top: 18px;
+  }
+
   .photo__gallery {
     width: 355px;
     display: block;
+    margin-top: 11px;
   }
 
   .sunset {
@@ -482,7 +566,7 @@ footer {
     grid-column: 1/2;
   } */
   .top__decor-footer {
-    margin-top: -60px;
+    margin-top: -30px;
   }
 
   .bottom__decor-footer {
@@ -495,6 +579,10 @@ footer {
 
   .footer__heading {
     font-size: 116px;
-    margin-top: 90px;
+    margin-top: 221px;
   }
+
+  .bottom__decor-footer {
+    margin-top: 223px;
+}
 }

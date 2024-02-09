@@ -46,7 +46,10 @@
 }
 
 .header__theme-menu-button:hover {
+  /* Изменения после ревью */
+  cursor: pointer;
   outline: 1px  solid var(--menu-accent-color);
+  border-color: transparent;
 }
 
 .header__theme-menu-button:focus-visible {
@@ -101,10 +104,7 @@
   border-left: 1px solid var(--menu-accent-color); 
 }
 
-/* Стилизация ссылок в тексте */
-.text-link {
-  text-shadow: 1px 1px 0px var(--accent-color);
-}
+
 
 @media (prefers-color-scheme: dark) {
   :root {
