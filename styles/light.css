@@ -11,6 +11,7 @@
   --section-text-color: #353430;
   --menu-accent-color: #353430;
   --heading-shadow-color: #ff0070;
+  --hover-color: #35343040;
 }
 
 /* .page.theme_light {
@@ -51,5 +52,6 @@
     --section-text-color: #f1b2ce;
     --menu-accent-color: #ff0070;
     --heading-shadow-color: #ff0070;
+    --hover-color: #35343040;
     }
   }

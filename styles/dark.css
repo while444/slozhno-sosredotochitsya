@@ -10,6 +10,7 @@
   --section-text-color: #f1b2ce;
   --menu-accent-color: #ff0070;
   --heading-shadow-color: #ff0070;
+  --hover-color: #ff007040;
 }
 
 /*
@@ -46,10 +47,8 @@
 }
 
 .header__theme-menu-button:hover {
-  /* Изменения после ревью */
   cursor: pointer;
-  outline: 1px  solid var(--menu-accent-color);
-  border-color: transparent;
+  outline: 1px  solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -119,5 +118,6 @@
     --section-text-color: #f1b2ce;
     --menu-accent-color: #ff0070;
     --heading-shadow-color: #ff0070;
+    --hover-color: #ff007040;
     }
   }
